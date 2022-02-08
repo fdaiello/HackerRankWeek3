@@ -397,38 +397,21 @@ namespace HackerRankWeek3
                 else if (s[i] == ']')
                 {
                     // Checks if last pushed bracked matches
-                    if (stack.Count > 0 && stack.Peek() == '[')
-                    {
-                        stack.Pop();
-                    }
-                    else
-                    {
+                    if (stack.Count == 0 || stack.Pop() != '[')
                         return "NO";
-                    }
+
                 }
                 else if (s[i] == ')')
                 {
                     // Checks if last pushed bracked matches
-                    if (stack.Count > 0 && stack.Peek() == '(')
-                    {
-                        stack.Pop();
-                    }
-                    else
-                    {
+                    if (stack.Count == 0 || stack.Pop() != '(')
                         return "NO";
-                    }
                 }
                 else if (s[i] == '}')
                 {
                     // Checks if last pushed bracked matches
-                    if (stack.Count > 0 && stack.Peek() == '{')
-                    {
-                        stack.Pop();
-                    }
-                    else
-                    {
+                    if (stack.Count == 0 || stack.Pop() != '{')
                         return "NO";
-                    }
                 }
             }
 

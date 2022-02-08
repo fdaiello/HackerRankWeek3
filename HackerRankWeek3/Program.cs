@@ -9,7 +9,13 @@ namespace HackerRankWeek3
     {
         static void Main(string[] args)
         {
-            TestIceCreamParlor1();
+            TestIsBalanced();
+        }
+        static void TestIsBalanced()
+        {
+            string s = "[{()}]";
+            Console.WriteLine(Result.isBalanced(s));
+            Console.WriteLine("Expected YES");
         }
         static void TestIceCreamParlor1()
         {
